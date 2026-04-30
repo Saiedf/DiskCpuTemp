@@ -16,8 +16,8 @@
 # wget -O /tmp/installer_diskcputemp_auto.sh "https://raw.githubusercontent.com/Saiedf/DiskCpuTemp/main/installer_diskcputemp_auto.sh" && chmod 755 /tmp/installer_diskcputemp_auto.sh && /bin/sh /tmp/installer_diskcputemp_auto.sh
 # ==========================================================
 
-PACKAGE_NAME='enigma2-plugin-extensions-diskcputemp'
-LEGACY_PACKAGE_NAME='enigma2-plugin-extensions-diskandcputemperature'
+PACKAGE_NAME='enigma2-plugin-SystemPlugins-diskcputemp'
+LEGACY_PACKAGE_NAME='enigma2-plugin-SystemPlugins-diskandcputemperature'
 PLUGIN_TITLE='DiskCpuTemp'
 PLUGIN_FOLDER='DiskCpuTemp'
 
@@ -436,11 +436,11 @@ detect_installed_package() {
 
 find_old_plugin_paths() {
     FOUND_PATHS=''
-    PLUGIN_EXTENSIONS_PATH="/usr/lib/enigma2/python/Plugins/Extensions/$PLUGIN_FOLDER"
+    PLUGIN_SystemPlugins_PATH="/usr/lib/enigma2/python/Plugins/SystemPlugins/$PLUGIN_FOLDER"
     PLUGIN_SYSTEM_PATH="/usr/lib/enigma2/python/Plugins/SystemPlugins/$PLUGIN_FOLDER"
 
-    if [ -d "$PLUGIN_EXTENSIONS_PATH" ]; then
-        FOUND_PATHS="$FOUND_PATHS $PLUGIN_EXTENSIONS_PATH"
+    if [ -d "$PLUGIN_SystemPlugins_PATH" ]; then
+        FOUND_PATHS="$FOUND_PATHS $PLUGIN_SystemPlugins_PATH"
     fi
 
     if [ -d "$PLUGIN_SYSTEM_PATH" ]; then
